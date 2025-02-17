@@ -1,6 +1,8 @@
 #from cgitb import text
 from flask import Flask,render_template,request
-import model 
+import model
+import os
+
 app = Flask('__name__')
 
 valid_userid = ['00sab00','1234','zippy','zburt5','joshua','dorothy w','rebecca','walker557','samantha','raeanne','kimmie','cassie','moore222']
@@ -37,6 +39,5 @@ def recommend_top5():
         return render_template('index.html')
 
 if __name__ == '__main__':
-    # app.debug=True
-
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Heroku sets the PORT environment variable
+    app.run(debug=True, host='0.0.0.0', port=port)
