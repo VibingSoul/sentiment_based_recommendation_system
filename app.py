@@ -4,6 +4,11 @@ import model
 app = Flask('__name__')
 
 valid_userid = ['00sab00','1234','zippy','zburt5','joshua','dorothy w','rebecca','walker557','samantha','raeanne','kimmie','cassie','moore222']
+
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204  # No content, just avoid 404
+
 @app.route('/')
 def view():
     return render_template('index.html', text=None)
