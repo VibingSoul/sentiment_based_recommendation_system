@@ -1,1 +1,1 @@
-https://sentimentbasedrecommendationsy.herokuapp.com/
+https://productrecommendationsystem-d7810d73f036.herokuapp.com/
